@@ -42,14 +42,14 @@ public class Principal {
         }
         temporadas.forEach(System.out::println);
 
-
-        for (int i = 1; i < datosSerie.totalDeTemporadas(); i++) {
+        //funciones lambda
+        /*for (int i = 1; i < datosSerie.totalDeTemporadas(); i++) {
             List<DatosEpisodio> episodioTemporadas = temporadas.get(i).episodios();
             for (int j = 0; j < episodioTemporadas.size(); j++) {
                 System.out.println(episodioTemporadas.get(j).titulo());
             }
         }
-
+*/
         temporadas.forEach(t -> t.episodios().forEach(e -> System.out.println(e.titulo())));
 
     }
